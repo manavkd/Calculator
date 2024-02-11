@@ -1,29 +1,54 @@
-#calculator {
-  background-color: beige;
-  border: 2px solid rgb(123, 121, 121);
-  border-radius: 5px;
-  height: 360px;
-  width: 250px;
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
-
-#display {
-  border: 1px solid black;
-  margin: 10px;
-  width: 88%;
-  height: 30px;
-  font-size: 20px;
-}
-
-.button-container {
+body {
+  height: 100vh;
   display: flex;
+  align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  background: #e0e3eb;
 }
-
-.button {
-  width: 50px;
-  height: 50px;
-  margin: 4px;
-  border-radius: 10%;
-  border: 1px solid black;
+.container {
+  position: relative;
+  max-width: 300px;
+  width: 100%;
+  border-radius: 12px;
+  padding: 10px 20px 20px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+.display {
+  height: 80px;
+  width: 100%;
+  outline: none;
+  border: none;
+  text-align: right;
+  margin-bottom: 10px;
+  font-size: 25px;
+  color: #000e1a;
+  pointer-events: none;
+}
+.buttons {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+}
+.buttons button {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #eee;
+}
+.buttons button:active {
+  transform: scale(0.99);
+}
+.operator {
+  color: #2f9fff;
 }
